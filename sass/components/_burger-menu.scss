@@ -10,6 +10,10 @@
     display: none;
   }
 }
+.burger__open:hover,
+.burger__open:focus {
+  fill: #2196f3;
+}
 
 .burger__close {
   position: absolute;
