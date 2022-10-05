@@ -14,6 +14,16 @@
   --border-radius: 4px;
 }
 
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 body {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
@@ -203,12 +213,12 @@ ul {
 }
 
 .container {
-  width: 100%;
-  max-width: 480px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  outline-offset: -2px;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -292,7 +302,6 @@ ul {
     gap: 50px;
   }
 }
-
 .nav__item:last-child {
   margin-right: 0;
 }
@@ -305,33 +314,53 @@ ul {
 }
 
 .contact {
-  font-family: var(--main-font);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1428571429;
-  letter-spacing: 0.02em;
-  display: flex;
-  list-style-type: none;
-  margin-left: auto;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+  }
 }
 
-.contact .link {
-  justify-content: space-between;
-  text-decoration: none;
-  color: var(--contacts-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+@media screen and (min-width: 768px) {
+  .contact__item + .contact__item {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
-
-.contact__item + .contact__item {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .contact__item + .contact__item {
+    margin-left: 30px;
+    margin-top: 0;
+  }
 }
 
 .contact__link {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 32px 0px;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  letter-spacing: 0.02em;
+  list-style-type: none;
+  margin-left: auto;
+  color: var(--contacts-color);
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .contact__link:hover, .contact__link:focus {
   color: var(--brand-color-left);
