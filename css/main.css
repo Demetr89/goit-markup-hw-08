@@ -61,7 +61,7 @@ ul {
   top: 7px;
   right: 10px;
   border: none;
-  background-color: var(--primery-white-color);
+  background-color: #ffffff;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
@@ -75,11 +75,11 @@ ul {
   top: 7px;
   right: 10px;
   border: none;
-  background-color: var(--primery-white-color);
+  background-color: #ffffff;
   cursor: pointer;
 }
 .burger__close:hover, .burger__close:focus {
-  fill: var(--accent-color);
+  fill: #2196f3;
 }
 @media screen and (min-width: 768px) {
   .burger__close {
@@ -91,7 +91,7 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--primery-white-color);
+  background-color: #ffffff;
   width: 100vw;
   height: 100vh;
   padding-top: 48px;
@@ -282,10 +282,15 @@ ul {
 }
 
 .nav {
-  display: flex;
-  list-style-type: none;
-  margin-left: 93px;
-  gap: 50px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    list-style-type: none;
+    margin-left: 93px;
+    gap: 50px;
+  }
 }
 
 .nav__item:last-child {
