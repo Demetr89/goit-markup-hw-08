@@ -3,7 +3,7 @@
   top: 7px;
   right: 10px;
   border: none;
-  background-color: var(--primery-white-color);
+  background-color: #ffffff;
   cursor: pointer;
 
   @media screen and (min-width: 768px) {
@@ -17,12 +17,12 @@
   right: 10px;
 
   border: none;
-  background-color: var(--primery-white-color);
+  background-color: #ffffff;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    fill: var(--accent-color);
+    fill: #2196f3;
   }
 
   @media screen and (min-width: 768px) {
@@ -34,7 +34,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--primery-white-color);
+  background-color: #ffffff;
   width: 100vw;
   height: 100vh;
   padding-top: 48px;
@@ -54,10 +54,6 @@
   @media screen and (min-width: 1200px) {
   }
 }
-// .burger__wrap {
-//   display: flex;
-//   flex-direction: column;
-// }
 
 .burger__nav-link {
   transition-property: color;
