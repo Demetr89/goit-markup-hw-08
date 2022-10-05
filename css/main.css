@@ -45,6 +45,26 @@ ul {
   padding-left: 0px;
 }
 
+.conteiner {
+  width: 100%;
+  max-width: 480px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline-offset: -2px;
+}
+@media screen and (min-width: 768px) {
+  .conteiner {
+    min-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .conteiner {
+    min-width: 1200px;
+  }
+}
+
 .link {
   text-decoration: none;
   color: currentColor;
@@ -217,34 +237,19 @@ ul {
   right: -11px;
 }
 
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  outline-offset: -2px;
-}
-@media screen and (min-width: 768px) {
-  .container {
-    min-width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container {
-    min-width: 1200px;
-  }
-}
-
 .header {
   background: var(--brand-color-fut);
   border: 1px solid #ececec;
 }
 
 .header__conteiner {
-  display: flex;
+  position: relative;
 }
-
+@media screen and (min-width: 768px) {
+  .header__conteiner {
+    display: flex;
+  }
+}
 .header__logo--black {
   color: var(--main-txt-cl);
 }
@@ -377,31 +382,72 @@ ul {
 }
 
 .hero {
-  max-width: 1600px;
-  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/overImg.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/img/mob/studio/header-mob.jpg");
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-size: cover;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/img/mob/studio/header-mob@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/img/tablet/studio/header-tablet.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/img/tablet/studio/header-tablet@2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/img/desktop/studio/header-desktop.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/img/desktop/studio/header-desktop@2x.jpg");
+  }
 }
 
 .hero__title {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 360px;
   color: var(--light-txt-cl);
   font-family: var(--main-font);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3636363636;
-  text-align: center;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 30px;
-  width: 696px;
-  margin-left: auto;
-  margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+    min-width: 696px;
+  }
 }
 
 .hero__btn {
@@ -432,16 +478,22 @@ ul {
 }
 
 .feature-list {
-  display: flex;
-  color: var(--main-txt-cl);
-  font-family: var(--main-font);
-  margin: 0px;
-  gap: 30px;
-}
-
-.feature-list {
   flex-basis: calc((100% - 90px) / 4);
   list-style-type: none;
+  list-style: none;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature-list {
+    flex-wrap: nowrap;
+  }
 }
 
 .features__description {

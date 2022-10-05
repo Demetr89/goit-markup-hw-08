@@ -5,16 +5,20 @@
 }
 
 .feature-list {
-  display: flex;
-  color: var(--main-txt-cl);
-  font-family: var(--main-font);
-  margin: 0px;
-  gap: 30px;
-}
-
-.feature-list {
   flex-basis: calc((100% - 3 * 30px) / 4);
   list-style-type: none;
+  list-style: none;
+  text-decoration: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .features__description {

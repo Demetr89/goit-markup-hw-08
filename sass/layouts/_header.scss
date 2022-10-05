@@ -4,7 +4,14 @@
 }
 
 .header__conteiner {
-  display: flex;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .header__logo--black {
