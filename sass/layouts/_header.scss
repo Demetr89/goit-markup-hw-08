@@ -3,6 +3,10 @@
   border: 1px solid #ececec;
 }
 
+.header__conteiner {
+  display: flex;
+}
+
 .header__logo--black {
   color: var(--main-txt-cl);
 }

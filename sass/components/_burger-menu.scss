@@ -1,0 +1,150 @@
+.burger__open {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  border: none;
+  background-color: var(--primery-white-color);
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.burger__close {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+
+  border: none;
+  background-color: var(--primery-white-color);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--primery-white-color);
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  z-index: 999;
+  > .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
+}
+// .burger__wrap {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.burger__nav-link {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: inline-block;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #212121;
+  text-decoration: none;
+  margin-bottom: 30px;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
+
+.burger__contact-mail {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: #757575;
+  text-decoration: none;
+  margin-bottom: 64px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 22px;
+    line-height: 1.16;
+  }
+}
+
+.burger__contact-tel {
+  display: block;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+  text-decoration: none;
+  margin-bottom: 32px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
+    line-height: 1.14;
+  }
+}
+
+.burger__soc {
+  display: flex;
+  gap: 20px;
+}
+
+.burger__soc-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+  text-decoration: none;
+
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+    line-height: 1.22;
+  }
+}
+
+.burger__soc-item {
+  position: relative;
+}
+
+.burger__soc-item:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 22px;
+  background-color: rgba(33, 33, 33, 0.2);
+  position: absolute;
+  top: 0px;
+  right: -11px;
+}
