@@ -1,0 +1,48 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-mail {
+  width: 1.3330078125em;
+}
+
+.icon-phone {
+  width: 0.625em;
+}
+
+.icon-union {
+  width: 1.7666015625em;
+}
+
+.icon-company {
+  width: 1.7666015625em;
+}
+
+.icon-comp {
+  width: 1.7666015625em;
+}
+
+.icon-foster {
+  width: 1.7666015625em;
+}
+
+.icon-brand {
+  width: 1.7666015625em;
+}
+
+.icon-teg {
+  width: 1.7666015625em;
+}

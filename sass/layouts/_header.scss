@@ -1,0 +1,111 @@
+.header {
+  background: var(--brand-color-fut);
+  border: 1px solid #ececec;
+}
+
+.header__logo--black {
+  color: var(--main-txt-cl);
+}
+
+.header__nav .logo__link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.nav__link {
+  display: block;
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: var(--main-txt-cl);
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: var(--brand-color-left);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+  }
+}
+
+.nav__link--current {
+  color: var(--brand-color-left);
+}
+
+.nav__link--current::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  border-radius: 2px;
+  border: transparent;
+  background-color: var(--brand-color-left);
+  bottom: -3%;
+  display: block;
+}
+.nav {
+  display: flex;
+  list-style-type: none;
+  margin-left: 93px;
+  gap: 50px;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.contact {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  display: flex;
+  list-style-type: none;
+  margin-left: auto;
+}
+
+.contact .link {
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--contacts-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.contact__item + .contact__item {
+  margin-left: 50px;
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 0px;
+  &:hover,
+  &:focus {
+    color: var(--brand-color-left);
+  }
+}
+
+.contact__link:hover .contacts__icon {
+  fill: #188ce8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+}
