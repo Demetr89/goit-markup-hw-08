@@ -1,12 +1,13 @@
 .features {
-  list-style-type: none;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .feature-list {
-  flex-basis: calc((100% - 3 * 30px) / 4);
-  list-style-type: none;
   list-style: none;
   text-decoration: none;
 
@@ -14,11 +15,33 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: space-around;
   }
 
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
   }
+}
+
+.features-list__item {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+  }
+}
+.feature-list__icon-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 450px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .features__description {
@@ -29,59 +52,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
-  width: 270px;
-}
-
-.features-list__item-antena::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background-image: url(../img/antena.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--team-color-content);
-  border-radius: 4px;
-
-  margin-bottom: 30px;
-}
-
-.features-list__item-clock::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background-image: url(../img/clock.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--team-color-content);
-  border-radius: 4px;
-
-  margin-bottom: 30px;
-}
-
-.features-list__item-diagram::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background-image: url(../img/diagram.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--team-color-content);
-  border-radius: 4px;
-
-  margin-bottom: 30px;
-}
-
-.features-list__item-astronaut::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background-image: url(../img/astronaut.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--team-color-content);
-  border-radius: 4px;
-
-  margin-bottom: 30px;
 }
 
 .features-list__title {
@@ -92,4 +62,12 @@
   text-transform: uppercase;
   color: var(--brand-color-right);
   margin-bottom: 10px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
