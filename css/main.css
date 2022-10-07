@@ -636,7 +636,6 @@ img {
   display: flex;
   list-style-type: none;
   font-family: var(--main-font);
-  gap: 30px;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 30px;
@@ -667,7 +666,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--contacts-color);
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .team__main-title {
