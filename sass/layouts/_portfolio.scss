@@ -19,18 +19,15 @@
 
 .proect {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
-  list-style-type: none;
-  font-family: var(--main-font);
-  padding-left: 0px;
-}
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 
-.flex {
-  width: 370px;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .text {
@@ -42,7 +39,21 @@
 }
 
 .list-item {
-  position: relative;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 5px 5px -1px rgba(0, 0, 0, 0.3);
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .list-item-proect {
@@ -50,9 +61,6 @@
 }
 
 .proect .list-item {
-  width: 370px;
-  background-color: var(--brand-color-fut);
-
   background: var(--brand-color-fut);
   border: 1px solid #eeeeee;
 }
@@ -69,14 +77,14 @@
 
 .filtrs {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 50px;
 
-  list-style-type: none;
-  font-size: 16px;
-  line-height: calc(26 / 16);
-  letter-spacing: 0.03em;
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 8px;
+  }
 }
 
 .button {
@@ -92,7 +100,7 @@
   display: inline-block;
   cursor: pointer;
   border: 1px solid transparent;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
@@ -101,6 +109,13 @@
     color: var(--light-txt-cl);
     box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%),
       0px 2px 2px rgb(0 0 0 / 12%);
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
 
