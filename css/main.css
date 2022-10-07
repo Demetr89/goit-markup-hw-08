@@ -107,15 +107,13 @@ img {
   background-color: #ffffff;
   cursor: pointer;
 }
+.burger__open:hover, .burger__open:focus {
+  fill: #2196f3;
+}
 @media screen and (min-width: 768px) {
   .burger__open {
     display: none;
   }
-}
-
-.burger__open:hover,
-.burger__open:focus {
-  fill: #2196f3;
 }
 
 .burger__close {
@@ -146,7 +144,7 @@ img {
   padding-bottom: 48px;
   z-index: 999;
 }
-.burger > .container {
+.burger > .conteiner {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -172,7 +170,7 @@ img {
   margin-bottom: 30px;
 }
 .burger__nav-link:hover, .burger__nav-link:focus {
-  color: var(--accent-color);
+  color: #2196f3;
 }
 @media screen and (max-width: 480px) {
   .burger__nav-link {
