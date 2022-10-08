@@ -124,12 +124,19 @@
 }
 
 .modal__check-lable {
+  position: relative;
   display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 11px;
+  line-height: 1.14;
   color: var(--contacts-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
+
 .form-btn {
   display: flex;
   align-items: center;
