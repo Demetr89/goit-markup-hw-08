@@ -369,6 +369,8 @@ img {
   display: flex;
   align-items: center;
   gap: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 500;
@@ -383,6 +385,11 @@ img {
 }
 .contact__link:hover, .contact__link:focus {
   color: var(--brand-color-left);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__link {
+    padding: 0;
+  }
 }
 
 .contact__link:hover .contacts__icon {
@@ -580,23 +587,25 @@ img {
 }
 
 .work__actions {
-  position: relative;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .work__title {
-  position: absolute;
-  bottom: 0;
   left: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--light-txt-cl);
-  background-color: rgba(47, 48, 58, 0.8);
-  padding: 27px;
-  min-width: 370px;
 }
 
 .work__item {
@@ -647,13 +656,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .team__item {
-    max-width: 354px;
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .team__item {
-    max-width: 270px;
-    height: 428px;
+    flex-basis: calc((100% - 90px) / 4);
   }
 }
 
@@ -807,16 +815,20 @@ img {
   margin-right: 0px;
 }
 
+.footer__logo {
+  display: block;
+  margin: 0 0 20px;
+}
+
 .footer .link {
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7142857143;
-  color: var(--brand-color-fut);
   text-decoration: none;
   list-style-type: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .item {
@@ -845,9 +857,14 @@ img {
     flex-direction: row;
     align-content: center;
     align-items: baseline;
+    gap: 25px;
   }
 }
 
+.footer_wrap {
+  justify-content: space-around;
+  align-items: baseline;
+}
 @media screen and (min-width: 768px) {
   .footer_wrap {
     display: flex;
@@ -895,12 +912,14 @@ img {
 
 .logo__link {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
-.footer__adress-link:hover,
-.footer__adress-link:focus {
+.footer__adress-link {
+  color: var(--brand-color-fut);
+}
+.footer__adress-link:hover, .footer__adress-link:focus {
   color: var(--brand-color-left);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 }
@@ -940,7 +959,7 @@ img {
 }
 
 .footer__socials-icon {
-  fill: currentColor;
+  fill: #ffffff;
 }
 
 .footer__socials {
@@ -962,10 +981,7 @@ img {
   fill: var(--txt-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 }
-
-.footer__socials-link:hover,
-.footer__socials-link:focus {
-  color: var(--brand-color-fut);
+.footer__socials-link:hover, .footer__socials-link:focus {
   background-color: var(--brand-color-left);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 }
@@ -989,19 +1005,17 @@ img {
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .form {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .form {
-    margin-left: 93px;
-    align-items: flex-end;
-    flex-direction: row;
-    gap: 0;
-    width: auto;
+    width: 570px;
+    display: flex;
   }
 }
 
@@ -1018,26 +1032,27 @@ img {
   }
 }
 
-.sing-up__lable {
-  text-align: center;
+.footer__text {
+  display: block;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 .sing-up__input {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: #2f303a;
-  width: 100%;
+  width: 450px;
   height: 50px;
   outline: rgba(255, 255, 255, 0.3);
   padding-left: 16px;
   color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
 }
 .sing-up__input::placeholder {
   font-weight: 400;
@@ -1048,23 +1063,33 @@ img {
 }
 @media screen and (min-width: 768px) {
   .sing-up__input {
-    width: 100%;
-    max-width: 450px;
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
   .sing-up__input {
     max-width: 358px;
-    margin-top: 20px;
+    margin-right: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe-wrap {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-wrap {
+    max-width: 358px;
+    margin-left: 93px;
   }
 }
 
 .sign-up__button {
-  position: relative;
   display: flex;
   align-items: center;
   text-align: center;
-  padding-left: 28px;
+  padding: 10px 28px;
   max-width: 100%;
   width: 200px;
   height: 50px;
@@ -1079,21 +1104,14 @@ img {
   letter-spacing: 0.06em;
   cursor: pointer;
   min-height: 43px;
-  margin-left: 12px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 1200px) {
   .sign-up__button {
-    margin-left: 12px;
+    margin-right: 0;
+    margin-left: 0;
   }
-}
-
-.sign-up__icon {
-  position: absolute;
-  top: 13px;
-  left: 135px;
-  right: 28px;
-  bottom: 13px;
-  margin-left: 10px;
 }
 
 .footer__submit-input::placeholder {
@@ -1148,7 +1166,7 @@ img {
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   border-radius: 4px;
-  box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2), 1px 0px 1px rgba(0, 0, 0, 0.14), 3px 0px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
@@ -1406,7 +1424,6 @@ img {
 }
 
 .sign-up__icon {
-  position: absolute;
   top: 13px;
   left: 135px;
   right: 28px;
@@ -1543,6 +1560,7 @@ img {
 }
 
 .port {
+  flex-grow: 1;
   padding: 20px 24px 20px 24px;
 }
 
@@ -1581,14 +1599,14 @@ img {
 
 .overlay-desc {
   position: absolute;
-  background-color: rgba(33, 150, 243, 0.9);
   top: 0;
   left: 0;
+  background-color: rgba(33, 150, 243, 0.9);
   width: 100%;
   height: 100%;
   padding: 63px 24px;
   transform: translateY(101%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .project-link {
