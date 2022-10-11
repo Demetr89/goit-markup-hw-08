@@ -812,8 +812,6 @@ img {
   background: var(--hero-footer-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-left: 0px;
-  margin-right: 0px;
 }
 
 .footer__logo {
@@ -858,7 +856,6 @@ img {
     flex-direction: row;
     align-content: center;
     align-items: baseline;
-    gap: 25px;
   }
 }
 
@@ -881,7 +878,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer__adress {
@@ -898,12 +894,12 @@ img {
 
 .footer__conteiner-socials {
   text-align: center;
-  margin-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .footer__conteiner-socials {
     margin-bottom: 0;
     text-align: left;
+    margin-right: 93px;
   }
 }
 
@@ -1007,9 +1003,12 @@ img {
 
 .form {
   width: 100%;
+  margin-top: 60px;
 }
 @media screen and (min-width: 768px) {
   .form {
+    margin-left: auto;
+    margin-right: auto;
     width: 450px;
   }
 }
@@ -1017,19 +1016,20 @@ img {
   .form {
     width: 570px;
     display: flex;
+    margin-left: auto;
+    align-items: end;
   }
 }
 
-.sing-up {
+.sing-up__lable {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
 }
 @media screen and (min-width: 1200px) {
-  .sing-up {
+  .sing-up__lable {
     display: inline-block;
-    width: 358px;
+    margin-right: 12px;
   }
 }
 
@@ -1054,7 +1054,7 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: #2f303a;
-  width: 450px;
+  width: 100%;
   height: 50px;
   outline: rgba(255, 255, 255, 0.3);
   padding-left: 16px;
@@ -1071,27 +1071,24 @@ img {
 @media screen and (min-width: 768px) {
   .sing-up__input {
     width: 450px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .sing-up__input {
     max-width: 358px;
-    margin-right: 12px;
+    margin-bottom: 0;
   }
 }
 
+.subscribe-wrap {
+  width: 100%;
+}
 @media screen and (min-width: 768px) {
   .subscribe-wrap {
     margin-left: 0;
   }
 }
-@media screen and (min-width: 1200px) {
-  .subscribe-wrap {
-    max-width: 358px;
-    margin-left: 93px;
-  }
-}
-
 .sign-up__button {
   display: flex;
   align-items: center;
